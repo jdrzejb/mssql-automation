@@ -1,0 +1,1 @@
+sqlcmd -E -S .\INSERTGT -d msdb -Q "DECLARE @CleanupDate datetime; SET @CleanupDate = DATEADD(dd, -30, GETDATE()); EXECUTE dbo.sp_purge_jobhistory @oldest_date = @CleanupDate;" -b -o B:\OLA\Logs\PurgeJobHistory.txt

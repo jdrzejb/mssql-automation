@@ -1,0 +1,1 @@
+sqlcmd -E -S .\INSERTGT -d msdb -Q "DECLARE @CleanupDate datetime; SET @CleanupDate = DATEADD(dd, -30, GETDATE()); EXECUTE dbo.sp_delete_backuphistory @oldest_date = @CleanupDate;" -b -o B:\OLA\Logs\DeleteBackupHistory.txt

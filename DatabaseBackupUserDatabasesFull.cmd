@@ -1,0 +1,1 @@
+sqlcmd -E -S .\INSERTGT -d master -Q "EXECUTE dbo.DatabaseBackup @Databases = 'USER_DATABASES', @Directory = 'B:\SQL Backups', @BackupType = 'FULL', @Verify = 'Y', @CleanupTime = NULL, @CheckSum = 'Y', @LogToTable = 'Y';" -b -o B:\OLA\Logs\DatabaseBackupUserDatabasesFull.txt
