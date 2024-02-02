@@ -1,1 +1,1 @@
-sqlcmd -E -S .\INSERTGT -d Tools -Q "EXECUTE dbo.DatabaseIntegrityCheck @Databases = 'USER_DATABASES', @LogToTable = 'Y';" -b -o B:\OLA\Logs\DatabaseIntegrityCheckUserDatabases.txt
+sqlcmd -E -S .\INSERTGT -d master -Q "EXECUTE dbo.DatabaseIntegrityCheck @Databases = 'USER_DATABASES', @LogToTable = 'Y';" -b -o B:\OLA\Logs\DatabaseIntegrityCheckUserDatabases.txt
